@@ -39,21 +39,23 @@ export default function Home() {
   
   return (
     <main className="flex min-h-screen flex-col p-24">
-      <h1 style={{fontSize: '25px !important'}}>NEXT.JS Playground</h1>
+      <h1 style={{fontSize: '25px !important', paddingBottom: 30}}>NEXT.JS Playground</h1>
       <ul>
         {organizations.map(({id, name, yearfounded, category, contactfirstname, contactlastname, contactphone, contactemail, websiteurl, facebookurl, instagramurl, about}) => (
-          <li key={id}>
-            <p>Organization: {name}</p>
-            <p>Year Founded: {yearfounded}</p>
-            <p>Category: {category}</p>
-            <p>About: {about}</p>
-            <p>Contact`s Name: {contactfirstname} {contactlastname}</p>
-            <p>Contact`s Phone: {contactphone}</p>
-            <p>Contact`s Email: {contactemail}</p>
-            <p>Website: <a href={websiteurl} target='_blank'>{websiteurl}</a></p>
-            <p>Facebook: <a href={facebookurl} target='_blank'>{facebookurl}</a></p>
-            <p>Instagram: <a href={instagramurl} target='_blank'>{instagramurl}</a></p>
-          </li>
+          <div key={id} style={{paddingBottom: 20}}>
+            <li>
+              <p>Organization: {name}</p>
+              <p>Year Founded: {yearfounded}</p>
+              <p>Category: {category}</p>
+              <p>About: {about}</p>
+              <p>Contact`s Name: {contactfirstname} {contactlastname}</p>
+              <p>Contact`s Phone: {contactphone}</p>
+              <p>Contact`s Email: {contactemail}</p>
+              <p>Website: <a href={websiteurl} target='_blank'>{websiteurl}</a></p>
+              <p>Facebook: <a href={facebookurl} target='_blank'>{facebookurl}</a></p>
+              <p>Instagram: <a href={instagramurl} target='_blank'>{instagramurl}</a></p>
+            </li>
+          </div>
         ))}
       </ul>
     </main>
