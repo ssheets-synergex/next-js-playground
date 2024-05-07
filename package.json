@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "create-organizations-table": "ts-node --require ts-node/register --require esm ./app/db/migrations/create_organizations_table.ts",
+    "delete-organizations-table": "ts-node --require ts-node/register --require esm ./app/db/migrations/delete_organizations_table.ts"
   },
   "dependencies": {
     "@vercel/postgres": "^0.8.0",
